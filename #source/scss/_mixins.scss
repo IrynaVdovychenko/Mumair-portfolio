@@ -1,0 +1,70 @@
+@use "sass:math";
+@import "_variables.scss";
+
+
+//Адаптивна властивість
+@mixin adaptiveValue($property, $startSize, $minSize, $widthFrom: $containerWidth, $widthTo: $minWidth, $keepSize: 0) {
+	// Брейк-поінти в EM
+	$widthFromMedia: em($widthFrom);
+	$widthToMedia: em($widthTo);
+	// Початкове и кінцеве значення в REM
+	$minSizeValue: rem($minSize);
+	$startSizeValue: rem($startSize);
+	$addSize: math.div($startSize - $minSize, 16);
+	// Пересчитываем переменные относительно
+	// размера шрифта по умолчанию
+	$minWidthValue: math.div($minWidth, 16);
+	$maxWidthValue: math.div($maxWidth, 16);
+	$containerWidthValue: math.div($containerWidth, 16);
+	// Розрахунок діапазону в rem
+	$widthToRem: math.div($widthTo, 16);
+	$widthFromRem: math.div($widthFrom, 16);
+	// Если указано ограничение у контейнера,
+	// либо указана стартовая или конечная ширина
+	// включаем режим работы в промежутке ширин
+	@if ($maxWidthContainer > 0 or $widthFrom != $containerWidth or $widthTo != $minWidth) and $widthFrom > $widthTo {
+		// Если стартовая ширина равна ширине контейнера + отступы,
+		// или указана настройка "keepSize" ставим значение
+		// по умолчанию равное стартовому размеру
+		@if $widthFrom == $containerWidth or $keepSize == 1 or $keepSize == 2 {
+			@media (min-width: $widthFromMedia) {
+				#{$property}: $startSizeValue;
+			}
+		}
+		// Адаптируем размер в промежутке между указанными ширинами вьюпорта
+		@media (min-width: $widthToMedia) and (max-width: $widthFromMedia) {
+			#{$property}: calc(#{$minSizeValue} + #{$addSize} * (((100vw - #{$widthToRem + rem})) / ((#{$widthFromRem - $widthToRem}))));
+		}
+		// Если конечная ширина равна минимальной ширине
+		// или указана настройка "keepSize" ставим значение
+		// по умолчанию равное конечному размеру
+		@if $widthTo == $minWidth or $keepSize == 1 or $keepSize == 3 {
+			@media (max-width: $widthToMedia) {
+				#{$property}: $minSizeValue;
+			}
+		}
+	} @else {
+		// Режим работы по всей ширине вьюпорта
+		#{$property}: calc(#{$minSizeValue} + #{$addSize} * (((100vw - #{$widthToRem + rem})) / ((#{$maxWidth - $widthTo}))));
+	}
+}
+
+//Переклад одних одиниць в інші
+
+//у %
+@function prc($pxOne, $pxTwo) {
+	$result: math.div($pxOne, $pxTwo) * 100%;
+	@return $result;
+}
+
+//у rem (відносно розміру шрифта в тезі html, якщо не вказано, то 16)
+@function rem($px) {
+	$result: math.div($px, 16) + rem;
+	@return $result;
+}
+
+//у em (відносно розміру шрифта батьківського елементу)
+@function em($px, $current: 16) {
+	$result: math.div($px, $current) + em;
+	@return $result;
+}

@@ -1,0 +1,43 @@
+//мінімальна ширина сторінки
+$minWidth: 320;
+//ширина полотна
+$maxWidth: 1920;
+//ширина обмежуючого контейнера (0 = немає обмежень)
+$maxWidthContainer:1400;
+//Загальний відступ у контейнера
+//(30 = по 15px зліва та справа, 0 = немає відступів)
+$containerPadding: 30;
+
+//ширина спрацьовування першого брейкпоінта
+$containerWidth: $maxWidthContainer + $containerPadding;
+
+$pc: em($containerWidth); // ПК, ноутбуки, деякі планшети в горизонтальному положенні
+$tablet: em(991.98); //Планшети, деякі телефони в горизонтальному положенні
+$mobile: em(767.98); //Телефони L
+$mobileSmall: em(479.98); //Телефони S
+
+// Тип адаптиву:
+// 1 = responsive (without breakpoints)
+// 2 = adapntive (using breakpoints)
+$responsiveType: 1;
+
+/*-----------------кольори------------------*/
+
+$colorTextLight: #000;
+$colorTextDark: #fff;
+$colorBgLight: #fff;
+$colorBgDark: #1E1E1E;
+$orange: #FD6F00;
+$lightGrey: #F8F8F8; 
+
+
+/*-----------------кольори------------------*/
+
+
+
+//розмір шрифту за замовченням
+$fontSizeBase: 21;
+//шрифт
+$fontFamilyBase: 'Poppins';
+
+

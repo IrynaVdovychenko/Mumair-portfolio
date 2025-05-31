@@ -1,0 +1,271 @@
+@use "sass:math";
+
+@import "_nullstyle.scss";
+@import "_mixins.scss";
+@import "_variables.scss";
+/*------------------------Fonts Import----------------------------------*/
+
+/*--------------- @import url('&display=swap');--------*/
+@import url(https://fonts.googleapis.com/css?family=Poppins:regular,500,600,700&display=swap);
+/*@font-face {
+    font-family: 'Gotham';
+    src: url('../fonts/Gotham-Black.woff2') format('woff2'),
+        url('../fonts/Gotham-Black.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}*/
+/*------------------------Fonts Import----------------------------------*/
+
+
+
+/*---------- Отримання схеми із налаштувань браузера--------------*/
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: $colorBgDark;
+        color: $colorTextDark;
+    }
+}
+@media (prefers-color-scheme: light) {
+    body {
+        background-color: $colorBgLight;
+        color: $colorTextLight;
+    }
+}
+/*---------- Отримання схеми із налаштувань браузера--------------*/
+
+body {
+    font-family: $fontFamilyBase;
+    font-size: rem($fontSizeBase);
+    letter-spacing: 0.03em;
+    transition: all .3s ease 0s;
+    &._lock {
+        overflow: hidden;
+        touch-action: none;
+    }
+}
+[data-theme='light'] {
+    background-color: $colorBgLight;
+    color: $colorTextLight;
+}
+[data-theme='dark'] {
+    background-color: $colorBgDark;
+    color: $colorTextDark;
+}
+
+.wrapper {
+    min-height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    main {
+        flex: 1 1 auto;
+    }
+    // Фікс для слайдеров
+	> * {
+		min-width: 0;
+	}
+}
+
+[data-fullscreen] {
+	min-height: 100vh;
+	._touch & {
+		min-height: calc(var(--vh, 1vh) * 100);
+		@media (max-width: $mobile) {
+			transition: height 0.2s;
+		}
+	}
+}
+
+@if ($responsiveType==1) {
+    //Responsive
+    [class*=_container] {
+        @if ($maxWidthContainer>0) {
+            max-width: rem($maxWidthContainer);
+            box-sizing: content-box;
+            margin: 0 auto;
+        }
+        @if ($containerPadding>0) {
+            padding: 0 rem(math.div($containerPadding, 2));
+        }
+    }
+} else {
+    //Breakpoints
+    [class*=_container] {
+        margin: 0 auto;
+        @if ($maxWidthContainer>0) {
+            max-width: rem($maxWidthContainer);
+            box-sizing: content-box;
+        } @else {
+            @if ($containerPadding>0) {
+                padding: 0 rem(math.div($containerPadding, 2));
+            }
+        }
+        @media (max-width: $pc) {
+            max-width: rem(970);
+        }
+        @media (max-width: $tablet) {
+            max-width: rem(750);
+        }
+        @media (max-width: $mobile) {
+            max-width: none;
+            @if ($containerPadding>0 and $maxWidthContainer>0) {
+                padding: 0 rem(math.div($containerPadding, 2));
+            }
+        }
+    }
+}
+
+[class*="-ibg"] {
+	position: relative;
+    height: 0;
+	img {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		object-fit: contain;
+	}
+}
+
+
+h1 {
+    @include adaptiveValue('font-size', 100, 60);
+    font-weight: 700;
+    line-height: 1.2;
+    text-transform: uppercase;
+}
+h2 {
+    @include adaptiveValue('font-size', 65, 45);
+    font-weight: 600;
+    line-height: prc(98,65);
+    text-transform: capitalize;
+    text-align: center;
+}
+h3 {
+    @include adaptiveValue('font-size', 32, 25);
+    font-weight: 600;
+    line-height: prc(48,32);
+}
+
+[class$="__socials"]{
+        display: flex;
+        gap: rem(25);
+        justify-content: center;
+}
+
+[class$="__social"] {
+    width: rem(32.5);
+    height: rem(32.5);
+    transition: fill 0.2s ease 0s;
+    [data-theme='dark'] & {
+        fill: $colorTextDark;
+    }
+    @media (any-hover: hover) {
+        &:hover{
+            fill: $orange;
+        }
+    }
+    }
+
+/*
+svg {
+    width: rem(25);
+    height: rem(25);
+    fill: $orange;
+    &:last-child {
+        width: rem(200);
+        fill: $colorBgLight;
+    }
+}
+    */
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease 0s;
+    font-size: inherit;
+    &_orange {
+        background-color: $orange;
+        color: $colorTextDark;
+    } 
+    &_grey {
+        background-color: $lightGrey;
+        color: $colorTextLight;
+    }
+    @media (any-hover: hover) {
+        &_orange:hover {
+            //background-color: #06a0a8;
+            box-shadow: 0 0 rem(12) $orange;
+        }
+        &_grey:hover {
+            //background-color: #06a0a8;
+            box-shadow: 0 0 rem(12) $colorTextLight;
+        }
+    }
+}
+
+/* ----------- Burger -----------------------------*/
+.burger {
+    display: none;
+    @media (max-width: $mobile) {
+        display: block;
+        position: relative;
+        width: 40px;
+        height: 25px;
+        cursor: pointer;
+        z-index: 5;
+        background-color: transparent;
+        &::before,
+        &::after {
+            content: '';
+            transition: all .3s ease 0s;
+        }
+        span,
+        &::before,
+        &::after{
+            position: absolute;
+            height: 2px;
+            width: 100%;
+            right: 0;
+            background-color: $colorTextLight;
+            [data-theme='dark'] & {
+                background-color: $colorTextDark;
+            }
+        }
+        &::before {
+            top: 0;
+        }
+        &::after {
+            bottom: 0;
+        }
+        span {
+            top: 50%;
+            right: 0;
+            margin-top: -1px;
+            transition: transform 0.3s ease 0s;
+        }
+        ._open & {
+            span {
+                //width: 0;
+                transform: scale(0);
+            }
+            &::before{
+                top: calc(50% - 1px);
+                transform: rotate(-45deg) translate(0px, -50%);
+            }
+            &::after {
+                bottom: calc(50% - 1px);
+                transform: rotate(45deg) translate(0px, -50%);
+            }
+        }
+    }
+}
+/* ----------- Burger -----------------------------*/
+
+
+@import "_header.scss";
+@import "_main.scss";
+@import "_footer.scss";
