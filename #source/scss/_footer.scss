@@ -1,0 +1,107 @@
+@import "variables.scss";
+
+
+.footer {
+    // .footer__info
+    &__info {
+        background-color: $lightGrey;
+        @include adaptiveValue('padding-top',109,40);
+        @include adaptiveValue('padding-bottom',62,30);
+        [data-theme='dark'] & {
+            background-color: $colorBgDark;
+        }
+    }
+    // .footer__container
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        & > *:not(:last-child) {
+            margin-bottom: rem(30);
+        }
+    }
+    // .footer__logo
+    &__logo {
+        min-height: 100%;
+        width: rem(270);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        column-gap: rem(15);
+        & svg {
+            &:first-child {
+                fill: $orange;
+                width: rem(70);
+                height: rem(70);
+            }
+            &:last-child {
+                display: inline-block;
+                width: rem(180);
+                height: rem(67);
+                fill: #3b3b3b;
+                [data-theme='dark'] & {
+                    fill: $lightGrey;
+                }
+            }
+        }
+    }
+    // .footer__menu
+	&__menu {
+	}
+    // .footer__socials
+    &__socials {
+    }
+    // .footer__social
+    &__social {
+    }
+    // .footer__rights
+    &__rights {
+        background-color: #545454;
+        padding: rem(26) 0;
+        [data-theme='dark'] & {
+            background-color: #121212;
+        }
+    }
+    // .footer__text
+    &__text {
+        color: $colorTextDark;
+        line-height: prc(32,21);
+        text-align: center;
+        @include adaptiveValue("font-size",21,15);
+        & span {
+            color: $orange;
+            font-weight: 700;
+        }
+    }
+}
+.menuFooter {
+    // .menuFooter__list
+    &__list {
+        display: flex;
+        justify-content: space-around;
+        gap: rem(12);
+        flex-wrap: wrap;
+        @media (max-width: $mobileSmall) {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+    // .menuFooter__item
+    &__item {
+        @media (max-width: $mobile) {
+            flex-basis:30%;
+        }
+        @media (max-width: $mobileSmall) {
+            flex-basis:auto;
+        }
+    }
+    // .menuFooter__link
+    &__link {
+        padding: rem(10) rem(14);
+        @include adaptiveValue('padding-top',10,7,1430,768,1);
+        @include adaptiveValue('padding-bottom',10,7,1430,768,1);
+        @include adaptiveValue('padding-right',14,7,1430,768,1);
+        @include adaptiveValue('padding-left',14,7,1430,768,1);
+        line-height: prc(32,21);
+    }
+}
