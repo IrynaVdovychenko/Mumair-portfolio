@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Business</title>
+    <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/lightgallery@2.8.3/css/lightgallery-bundle.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body data-theme="light">
+    <div class="wrapper">
+        <header class="header">
+            <div class="header__container">
+                <div class="header__logo">
+                    <svg>
+                        <use xlink:href="img/sprite.svg#mu"></use>
+                    </svg>
+                    <svg>
+                        <use xlink:href="img/sprite.svg#mumair"></use>
+                    </svg>
+                </div>
+                <nav class="header__menu menu">
+                    <ul class="menu__list">
+                        <li class="menu__item">
+                            <a data-goto="#home" href="##" class="menu__link">Home</a>
+                        </li>
+                        <li class="menu__item">
+                            <a data-goto="#about" href="##" class="menu__link">About Me</a>
+                        </li>  
+                        <li class="menu__item">
+                            <a data-goto="#service" href="##" class="menu__link">Services</a>
+                        </li> 
+                        <li class="menu__item">
+                            <a data-goto="#projects" href="##" class="menu__link">Projects</a>
+                        </li>
+                        <li class="menu__item">
+                            <a data-goto="#testimonials" href="##" class="menu__link">Testimonials</a>
+                        </li>
+                        <li class="menu__item">
+                            <a data-goto="#contact" href="##" class="menu__link">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
+                <button class="header__action button button_orange">Download CV</button>
+                <button class="header__icon burger">
+                    <span></span>
+                </button>
+                <div class="header__theme theme">
+                    <div class="theme__body">
+                        <input id="checkboxTheme" autocomplete="off" type="checkbox" name="theme" class="theme__input">
+                        <label for="checkboxTheme" class="theme__label">
+                            <svg class="theme__img theme__img_dark">
+                                <use xlink:href="img/sprite.svg#dark"></use>
+                            </svg>
+                            <svg class="theme__img theme__img_light">
+                                <use xlink:href="img/sprite.svg#light"></use>
+                            </svg>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="main">
+            <section data-fullscreen id="home" class="main__introduction introduction">
+                <div class="introduction__container">
+                    <div class="introduction__content">
+                        <p class="introduction__hi">Hi I am</p>
+                        <p class="introduction__name">Muhammad Umair</p>
+                        <h1 class="introduction__title title">
+                            <p class="title__part">UI & UX</p>
+                            <p class="title__part">Designer</p>
+                        </h1>
+                        <p class="introduction__text">Lorem ipsum dolor sit amet consectetur. Tristique amet sed massa nibh lectus netus in. Aliquet donec morbi convallis pretium. Turpis tempus pharetra</p>
+                        <a data-goto="#contact" href="##" class="introduction__contact button button_orange">Hire Me</a>
+                    </div>
+                    <div class="introduction__personal">
+                        <div class="introduction__image-ibg">
+                            <picture>
+                                <source srcset="img/photo_1_.webp" type="image/webp">
+                                    <img src="img/photo_1_.png" alt="Photo">
+                            </picture>
+                        </div>
+                        <div class="introduction__socials">
+                            <a href="##" class="introduction__link">
+                                <svg class="introduction__social">
+                                    <use xlink:href="img/sprite.svg#facebook"></use>
+                                </svg>
+                            </a>
+                            <a href="##" class="introduction__link">
+                                <svg class="introduction__social">
+                                    <use xlink:href="img/sprite.svg#twitter"></use>
+                                </svg>
+                            </a>
+                            <a href="##" class="introduction__link">
+                                <svg class="introduction__social">
+                                    <use xlink:href="img/sprite.svg#instagram"></use>
+                                </svg>
+                            </a>
+                            <a href="##" class="introduction__link">
+                                <svg class="introduction__social">
+                                    <use xlink:href="img/sprite.svg#linkedin"></use>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <svg class="introduction__scroll">
+                        <use xlink:href="img/sprite.svg#arrow"></use>
+                    </svg>
+                </div>
+            </section>
+            <section id="about" class="main__about about">
+                <div class="about__container">
+                    <div class="about__personal">
+                        <div class="about__image-ibg">
+                            <picture>
+                                <source srcset="img/photo_2_.webp" type="image/webp">
+                                    <img src="img/photo_2_.png" alt="Photo">
+                            </picture>
+                        </div>
+                    </div>
+                    <div class="about__content">
+                        <h2 class="about__title">About Me</h2>
+                        <p class="about__text">Lorem ipsum dolor sit amet consectetur. Tristique amet sed massa nibh lectus netus in. Aliquet donec morbi convallis pretium. Turpis tempus pharetra</p>
+                        <ul class="about__progress progress">
+                            <li data-level="91" class="progress__item">
+                                <p class="progress__name">UX</p>
+                                <span class="progress__bar"></span>
+                            </li>
+                            <li data-level="87" class="progress__item">
+                                <p class="progress__name">Website Design</p>
+                                <span class="progress__bar"></span>
+                            </li>
+                            <li data-level="96" class="progress__item">
+                                <p class="progress__name">App Design</p>
+                                <span class="progress__bar"></span>
+                            </li>
+                            <li data-level="91" class="progress__item">
+                                <p class="progress__name">Graphic Design</p>
+                                <span class="progress__bar"></span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section id="service" class="main__services services">
+                <div class="services__container">
+                    <h2 class="services__title">Services</h2>
+                    <p class="services__text">Lorem ipsum dolor sit amet consectetur. Tristique amet sed massa nibh lectus netus in. Aliquet donec morbi convallis pretium</p>
+                    <ul class="services__list list-services">
+                        <li class="list-services__item">
+                            <div class="list-services__icon">
+                                <img src="img/services/1.svg" alt="UI/UX">
+                            </div>
+                            <div class="list-services__content">
+                                <h3 class="list-services__title">UI/UX</h3>
+                                <p class="list-services__text">Lorem ipsum dolor sit amet consectetur. Morbi diam nisi nam diam interdum</p>
+                            </div>
+                        </li>
+                        <li class="list-services__item">
+                            <div class="list-services__icon">
+                                <img src="img/services/2.svg" alt="Web Design">
+                            </div>
+                            <div class="list-services__content">
+                                <h3 class="list-services__title">Web Design</h3>
+                                <p class="list-services__text">Lorem ipsum dolor sit amet consectetur. Morbi diam nisi nam diam interdum</p>
+                            </div>
+                        </li>
+                        <li class="list-services__item">
+                            <div class="list-services__icon">
+                                <img src="img/services/3.svg" alt="App Design">
+                            </div>
+                            <div class="list-services__content">
+                                <h3 class="list-services__title">App Design</h3>
+                                <p class="list-services__text">Lorem ipsum dolor sit amet consectetur. Morbi diam nisi nam diam interdum</p>
+                            </div>
+                        </li>
+                        <li class="list-services__item">
+                            <div class="list-services__icon">
+                                <img src="img/services/4.svg" alt="Graphic Design">
+                            </div>
+                            <div class="list-services__content">
+                                <h3 class="list-services__title">Graphic Design</h3>
+                                <p class="list-services__text">Lorem ipsum dolor sit amet consectetur. Morbi diam nisi nam diam interdum</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section id="projects" class="main__projects projects">
+                <div class="projects__container">
+                    <h2 class="projects__title">My Projects</h2>
+                    <p class="projects__text">Lorem ipsum dolor sit amet consectetur. Mollis erat duis aliquam mauris est risus lectus. Phasellus consequat urna tellus</p>
+                    <div data-tabs class="projects__tabs tabs">
+                        <nav data-tabs-titles class="tabs__navigation">
+                            <button type="button" class="tabs__title button_grey">All</button>
+                            <button type="button" class="tabs__title button_grey">UI/UX</button>
+                            <button type="button" class="tabs__title button_orange _tab-active">Web Design</button>
+                            <button type="button" class="tabs__title button_grey">App Design</button>
+                            <button type="button" class="tabs__title button_grey">Graphic Design</button>
+                        </nav>
+                        <div data-tabs-body class="tabs__content">
+                            <div class="tabs__body">
+                                <div class="tabs__item">
+                                    <ul class="tabs__list project">
+                                        <li class="project__item">
+                                            <div class="project__img-ibg">
+                                                <img src="img/projects/1/thumb.jpg" class="project__open-gallery" alt="Open Gallery" style="cursor:pointer;">
+                                                <!-- Контейнер з даними галереї -->
+                                                <div class="project__gallery-data" style="display: none;">
+                                                    <div data-src="img/projects/1/1.jpg" data-thumb="img/projects/1/1.jpg"></div>
+                                                    <div data-src="img/projects/1/2.jpg" data-thumb="img/projects/1/1.jpg"></div>
+                                                </div>
+                                            </div>
+                                            <div class="project__text">
+                                                <p class="project__service">Web Design</p>
+                                                <p class="project__title">AirCalling Landing Page Design</p>
+                                            </div>
+                                        </li>
+                                        <li class="project__item">
+                                            <div class="project__img-ibg">
+                                                <img src="img/projects/2/thumb.jpg" class="project__open-gallery" alt="Open Gallery" style="cursor:pointer;">
+                                                <!-- Контейнер з даними галереї -->
+                                                <div class="project__gallery-data" style="display: none;">
+                                                    <div data-src="img/projects/2/1.jpg" data-thumb="img/projects/2/1.jpg"></div>
+                                                    <div data-src="img/projects/2/2.jpg" data-thumb="img/projects/2/1.jpg"></div>
+                                                </div>
+                                            </div>
+                                            <div class="project__text">
+                                                <p class="project__service">Web Design</p>
+                                                <p class="project__title">Business Landing Page Design</p>
+                                            </div>
+                                        </li>
+                                        <li class="project__item">
+                                            <div class="project__img-ibg">
+                                                <img src="img/projects/3/thumb.jpg" class="project__open-gallery" alt="Open Gallery" style="cursor:pointer;">
+                                                <!-- Контейнер з даними галереї -->
+                                                <div class="project__gallery-data" style="display: none;">
+                                                    <div data-src="img/projects/3/1.jpg" data-thumb="img/projects/3/1.jpg"></div>
+                                                    <div data-src="img/projects/3/2.jpg" data-thumb="img/projects/3/1.jpg"></div>
+                                                </div>
+                                            </div>
+                                            <div class="project__text">
+                                                <p class="project__service">Web Design</p>
+                                                <p class="project__title">Ecom Web Page Design</p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <button type="button" class="tabs__more button_orange">View More</button>
+                                </div>
+                            </div>
+                            <div class="tabs__body">
+                                <div class="tabs__item">
+                                    <ul class="tabs__list project">
+                                        <li class="project__item">
+                                            <div class="project__img-ibg">
+                                                <img src="img/projects/3/thumb.jpg" class="project__open-gallery" alt="Open Gallery" style="cursor:pointer;">
+                                                <!-- Контейнер з даними галереї -->
+                                                <div class="project__gallery-data" style="display: none;">
+                                                    <div data-src="img/projects/3/1.jpg" data-thumb="img/projects/3/1.jpg"></div>
+                                                    <div data-src="img/projects/3/2.jpg" data-thumb="img/projects/3/1.jpg"></div>
+                                                </div>
+                                            </div>
+                                            <div class="project__text">
+                                                <p class="project__service">UI/UX</p>
+                                                <p class="project__title">Ecom Web Page Design</p>
+                                            </div>
+                                        </li>
+                                        <li class="project__item">
+                                            <div class="project__img-ibg">
+                                                <img src="img/projects/1/thumb.jpg" class="project__open-gallery" alt="Open Gallery" style="cursor:pointer;">
+                                                <!-- Контейнер з даними галереї -->
+                                                <div class="project__gallery-data" style="display: none;">
+                                                    <div data-src="img/projects/1/1.jpg" data-thumb="img/projects/1/1.jpg"></div>
+                                                    <div data-src="img/projects/1/2.jpg" data-thumb="img/projects/1/1.jpg"></div>
+                                                </div>
+                                            </div>
+                                            <div class="project__text">
+                                                <p class="project__service">UI/UX</p>
+                                                <p class="project__title">AirCalling Landing Page Design</p>
+                                            </div>
+                                        </li>
+                                        <li class="project__item">
+                                            <div class="project__img-ibg">
+                                                <img src="img/projects/2/thumb.jpg" class="project__open-gallery" alt="Open Gallery" style="cursor:pointer;">
+                                                <!-- Контейнер з даними галереї -->
+                                                <div class="project__gallery-data" style="display: none;">
+                                                    <div data-src="img/projects/2/1.jpg" data-thumb="img/projects/2/1.jpg"></div>
+                                                    <div data-src="img/projects/2/2.jpg" data-thumb="img/projects/2/1.jpg"></div>
+                                                </div>
+                                            </div>
+                                            <div class="project__text">
+                                                <p class="project__service">UI/UX</p>
+                                                <p class="project__title">Business Landing Page Design</p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <button type="button" class="tabs__more button_orange">View More</button>
+                                </div>
+                            </div>
+                            <div class="tabs__body">
+                                <div class="tabs__item">
+                                    <ul class="tabs__list project">
+                                        <li class="project__item">
+                                            <div class="project__img-ibg">
+                                                <img src="img/projects/2/thumb.jpg" class="project__open-gallery" alt="Open Gallery" style="cursor:pointer;">
+                                                <!-- Контейнер з даними галереї -->
+                                                <div class="project__gallery-data" style="display: none;">
+                                                    <div data-src="img/projects/2/1.jpg" data-thumb="img/projects/2/1.jpg"></div>
+                                                    <div data-src="img/projects/2/2.jpg" data-thumb="img/projects/2/1.jpg"></div>
+                                                </div>
+                                            </div>
+                                            <div class="project__text">
+                                                <p class="project__service">Web Design</p>
+                                                <p class="project__title">Business Landing Page Design</p>
+                                            </div>
+                                        </li>
+                                        <li class="project__item">
+                                            <div class="project__img-ibg">
+                                                <img src="img/projects/1/thumb.jpg" class="project__open-gallery" alt="Open Gallery" style="cursor:pointer;">
+                                                <!-- Контейнер з даними галереї -->
+                                                <div class="project__gallery-data" style="display: none;">
+                                                    <div data-src="img/projects/1/1.jpg" data-thumb="img/projects/1/1.jpg"></div>
+                                                    <div data-src="img/projects/1/2.jpg" data-thumb="img/projects/1/1.jpg"></div>
+                                                </div>
+                                            </div>
+                                            <div class="project__text">
+                                                <p class="project__service">Web Design</p>
+                                                <p class="project__title">AirCalling Landing Page Design</p>
+                                            </div>
+                                        </li>
+                                        <li class="project__item">
+                                            <div class="project__img-ibg">
+                                                <img src="img/projects/3/thumb.jpg" class="project__open-gallery" alt="Open Gallery" style="cursor:pointer;">
+                                                <!-- Контейнер з даними галереї -->
+                                                <div class="project__gallery-data" style="display: none;">
+                                                    <div data-src="img/projects/3/1.jpg" data-thumb="img/projects/3/1.jpg"></div>
+                                                    <div data-src="img/projects/3/2.jpg" data-thumb="img/projects/3/1.jpg"></div>
+                                                </div>
+                                            </div>
+                                            <div class="project__text">
+                                                <p class="project__service">Web Design</p>
+                                                <p class="project__title">Ecom Web Page Design</p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <button type="button" class="tabs__more button_orange">View More</button>
+                                </div>
+                            </div>
+                            <div class="tabs__body">
+                                <div class="tabs__item">
+                                    <ul class="tabs__list project">
+                                        <li class="project__item">
+                                            <div class="project__img-ibg">
+                                                <img src="img/projects/2/thumb.jpg" class="project__open-gallery" alt="Open Gallery" style="cursor:pointer;">
+                                                <!-- Контейнер з даними галереї -->
+                                                <div class="project__gallery-data" style="display: none;">
+                                                    <div data-src="img/projects/2/1.jpg" data-thumb="img/projects/2/1.jpg"></div>
+                                                    <div data-src="img/projects/2/2.jpg" data-thumb="img/projects/2/1.jpg"></div>
+                                                </div>
+                                            </div>
+                                            <div class="project__text">
+                                                <p class="project__service">App Design</p>
+                                                <p class="project__title">Business Landing Page Design</p>
+                                            </div>
+                                        </li>
+                                        <li class="project__item">
+                                            <div class="project__img-ibg">
+                                                <img src="img/projects/1/thumb.jpg" class="project__open-gallery" alt="Open Gallery" style="cursor:pointer;">
+                                                <!-- Контейнер з даними галереї -->
+                                                <div class="project__gallery-data" style="display: none;">
+                                                    <div data-src="img/projects/1/1.jpg" data-thumb="img/projects/1/1.jpg"></div>
+                                                    <div data-src="img/projects/1/2.jpg" data-thumb="img/projects/1/1.jpg"></div>
+                                                </div>
+                                            </div>
+                                            <div class="project__text">
+                                                <p class="project__service">App Design</p>
+                                                <p class="project__title">AirCalling Landing Page Design</p>
+                                            </div>
+                                        </li>
+                                        <li class="project__item">
+                                            <div class="project__img-ibg">
+                                                <img src="img/projects/3/thumb.jpg" class="project__open-gallery" alt="Open Gallery" style="cursor:pointer;">
+                                                <!-- Контейнер з даними галереї -->
+                                                <div class="project__gallery-data" style="display: none;">
+                                                    <div data-src="img/projects/3/1.jpg" data-thumb="img/projects/3/1.jpg"></div>
+                                                    <div data-src="img/projects/3/2.jpg" data-thumb="img/projects/3/1.jpg"></div>
+                                                </div>
+                                            </div>
+                                            <div class="project__text">
+                                                <p class="project__service">App Design</p>
+                                                <p class="project__title">Ecom Web Page Design</p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <button type="button" class="tabs__more button_orange">View More</button>
+                                </div>
+                            </div>
+                            <div class="tabs__body">
+                                <div class="tabs__item">
+                                    <ul class="tabs__list project">
+                                        <li class="project__item">
+                                            <div class="project__img-ibg">
+                                                <img src="img/projects/3/thumb.jpg" class="project__open-gallery" alt="Open Gallery" style="cursor:pointer;">
+                                                <!-- Контейнер з даними галереї -->
+                                                <div class="project__gallery-data" style="display: none;">
+                                                    <div data-src="img/projects/3/1.jpg" data-thumb="img/projects/3/1.jpg"></div>
+                                                    <div data-src="img/projects/3/2.jpg" data-thumb="img/projects/3/1.jpg"></div>
+                                                </div>
+                                            </div>
+                                            <div class="project__text">
+                                                <p class="project__service">Graphic Design</p>
+                                                <p class="project__title">Ecom Web Page Design</p>
+                                            </div>
+                                        </li>
+                                        <li class="project__item">
+                                            <div class="project__img-ibg">
+                                                <img src="img/projects/2/thumb.jpg" class="project__open-gallery" alt="Open Gallery" style="cursor:pointer;">
+                                                <!-- Контейнер з даними галереї -->
+                                                <div class="project__gallery-data" style="display: none;">
+                                                    <div data-src="img/projects/2/1.jpg" data-thumb="img/projects/2/1.jpg"></div>
+                                                    <div data-src="img/projects/2/2.jpg" data-thumb="img/projects/2/1.jpg"></div>
+                                                </div>
+                                            </div>
+                                            <div class="project__text">
+                                                <p class="project__service">Graphic Design</p>
+                                                <p class="project__title">Business Landing Page Design</p>
+                                            </div>
+                                        </li>
+                                        <li class="project__item">
+                                            <div class="project__img-ibg">
+                                                <img src="img/projects/1/thumb.jpg" class="project__open-gallery" alt="Open Gallery" style="cursor:pointer;">
+                                                <!-- Контейнер з даними галереї -->
+                                                <div class="project__gallery-data" style="display: none;">
+                                                    <div data-src="img/projects/1/1.jpg" data-thumb="img/projects/1/1.jpg"></div>
+                                                    <div data-src="img/projects/1/2.jpg" data-thumb="img/projects/1/1.jpg"></div>
+                                                </div>
+                                            </div>
+                                            <div class="project__text">
+                                                <p class="project__service">Graphic Design</p>
+                                                <p class="project__title">AirCalling Landing Page Design</p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <button type="button" class="tabs__more button_orange">View More</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="testimonials" class="main__testimonials testimonials">
+                <div class="testimonials__container">
+                    <h2 class="testimonials__title">Testimonials</h2>
+                    <p class="testimonials__text">Lorem ipsum dolor sit amet consectetur. Tristique amet sed massa nibh lectus netus in. Aliquet donec morbi convallis pretium</p>
+                    <div class="testimonials__response-cards">
+                        <div class="testimonials__swiper swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <article class="testimonials__card">
+                                        <div class="testimonials__photo">
+                                            <div class="testimonials__image-ibg">
+                                                <picture>
+                                                    <source srcset="img/testimonials/1_1.webp" type="image/webp">
+                                                    <img src="img/testimonials/1_1.jpg" alt="Photo">
+                                                </picture>
+                                            </div>
+                                        </div>
+                                        <div class="testimonials__content">
+                                            <p class="testimonials__response">
+                                                <span>
+                                                    <svg class="testimonials__quotes">
+                                                        <use xlink:href="img/sprite.svg#quotes"></use>
+                                                    </svg>
+                                                </span>
+                                                Lorem ipsum dolor sit amet consectetur. In enim cursus odio accumsan. Id leo urna velit neque mattis id tellus arcu condimentum. Augue dictum dolor elementum convallis dignissim malesuada commodo ultrices.
+                                                <span>
+                                                    <svg class="testimonials__quotes">
+                                                        <use xlink:href="img/sprite.svg#quotes"></use>
+                                                    </svg>
+                                                </span>
+                                            </p>
+                                            <p class="testimonials__name">Name</p>
+                                            <p class="testimonials__position">CEO</p>
+                                        </div>
+                                    </article>
+                                </div>
+                                <div class="swiper-slide">
+                                    <article class="testimonials__card">
+                                        <div class="testimonials__photo">
+                                            <div class="testimonials__image-ibg">
+                                                <picture>
+                                                    <source srcset="img/testimonials/2_1.webp" type="image/webp">
+                                                    <img src="img/testimonials/2_1.jpg" alt="Photo">
+                                                </picture>
+                                            </div>
+                                        </div>
+                                        <div class="testimonials__content">
+                                            <p class="testimonials__response">
+                                                <span>
+                                                    <svg class="testimonials__quotes">
+                                                        <use xlink:href="img/sprite.svg#quotes"></use>
+                                                    </svg>
+                                                </span>
+                                                Lorem ipsum dolor sit amet consectetur. In enim cursus odio accumsan. Id leo urna velit neque mattis id tellus arcu condimentum. Augue dictum dolor elementum convallis dignissim malesuada commodo ultrices.
+                                                <span>
+                                                    <svg class="testimonials__quotes">
+                                                        <use xlink:href="img/sprite.svg#quotes"></use>
+                                                    </svg>
+                                                </span>
+                                            </p>
+                                            <p class="testimonials__name">Name</p>
+                                            <p class="testimonials__position">CEO</p>
+                                        </div>
+                                    </article>
+                                </div>
+                                <div class="swiper-slide">
+                                    <article class="testimonials__card">
+                                        <div class="testimonials__photo">
+                                            <div class="testimonials__image-ibg">
+                                                <picture>
+                                                    <source srcset="img/testimonials/3_1.webp" type="image/webp">
+                                                    <img src="img/testimonials/3_1.jpg" alt="Photo">
+                                                </picture>
+                                            </div>
+                                        </div>
+                                        <div class="testimonials__content">
+                                            <p class="testimonials__response">
+                                                <span>
+                                                    <svg class="testimonials__quotes">
+                                                        <use xlink:href="img/sprite.svg#quotes"></use>
+                                                    </svg>
+                                                </span>
+                                                Lorem ipsum dolor sit amet consectetur. In enim cursus odio accumsan. Id leo urna velit neque mattis id tellus arcu condimentum. Augue dictum dolor elementum convallis dignissim malesuada commodo ultrices.
+                                                <span>
+                                                    <svg class="testimonials__quotes">
+                                                        <use xlink:href="img/sprite.svg#quotes"></use>
+                                                    </svg>
+                                                </span>
+                                            </p>
+                                            <p class="testimonials__name">Name</p>
+                                            <p class="testimonials__position">CEO</p>
+                                        </div>
+                                    </article>
+                                </div>
+                                <div class="swiper-slide">
+                                    <article class="testimonials__card">
+                                        <div class="testimonials__photo">
+                                            <div class="testimonials__image-ibg">
+                                                <picture>
+                                                    <source srcset="img/testimonials/4_1.webp" type="image/webp">
+                                                    <img src="img/testimonials/4_1.jpg" alt="Photo">
+                                                </picture>
+                                            </div>
+                                        </div>
+                                        <div class="testimonials__content">
+                                            <p class="testimonials__response">
+                                                <span>
+                                                    <svg class="testimonials__quotes">
+                                                        <use xlink:href="img/sprite.svg#quotes"></use>
+                                                    </svg>
+                                                </span>
+                                                Lorem ipsum dolor sit amet consectetur. In enim cursus odio accumsan. Id leo urna velit neque mattis id tellus arcu condimentum. Augue dictum dolor elementum convallis dignissim malesuada commodo ultrices.
+                                                <span>
+                                                    <svg class="testimonials__quotes">
+                                                        <use xlink:href="img/sprite.svg#quotes"></use>
+                                                    </svg>
+                                                </span>
+                                            </p>
+                                            <p class="testimonials__name">Name</p>
+                                            <p class="testimonials__position">CEO</p>
+                                        </div>
+                                    </article>
+                                </div>
+                                <div class="swiper-slide">
+                                    <article class="testimonials__card">
+                                        <div class="testimonials__photo">
+                                            <div class="testimonials__image-ibg">
+                                                <picture>
+                                                    <source srcset="img/testimonials/5_1.webp" type="image/webp">
+                                                    <img src="img/testimonials/5_1.jpg" alt="Photo">
+                                                </picture>
+                                            </div>
+                                        </div>
+                                        <div class="testimonials__content">
+                                            <p class="testimonials__response">
+                                                <span>
+                                                    <svg class="testimonials__quotes">
+                                                        <use xlink:href="img/sprite.svg#quotes"></use>
+                                                    </svg>
+                                                </span>
+                                                Lorem ipsum dolor sit amet consectetur. In enim cursus odio accumsan. Id leo urna velit neque mattis id tellus arcu condimentum. Augue dictum dolor elementum convallis dignissim malesuada commodo ultrices.
+                                                <span>
+                                                    <svg class="testimonials__quotes">
+                                                        <use xlink:href="img/sprite.svg#quotes"></use>
+                                                    </svg>
+                                                </span>
+                                            </p>
+                                            <p class="testimonials__name">Name</p>
+                                            <p class="testimonials__position">CEO</p>
+                                        </div>
+                                    </article>
+                                </div>
+                                <div class="swiper-slide">
+                                    <article class="testimonials__card">
+                                        <div class="testimonials__photo">
+                                            <div class="testimonials__image-ibg">
+                                                <picture>
+                                                    <source srcset="img/testimonials/6_1.webp" type="image/webp">
+                                                    <img src="img/testimonials/6_1.jpg" alt="Photo">
+                                                </picture>
+                                            </div>
+                                        </div>
+                                        <div class="testimonials__content">
+                                            <p class="testimonials__response">
+                                                <span>
+                                                    <svg class="testimonials__quotes">
+                                                        <use xlink:href="img/sprite.svg#quotes"></use>
+                                                    </svg>
+                                                </span>
+                                                Lorem ipsum dolor sit amet consectetur. In enim cursus odio accumsan. Id leo urna velit neque mattis id tellus arcu condimentum. Augue dictum dolor elementum convallis dignissim malesuada commodo ultrices.
+                                                <span>
+                                                    <svg class="testimonials__quotes">
+                                                        <use xlink:href="img/sprite.svg#quotes"></use>
+                                                    </svg>
+                                                </span>
+                                            </p>
+                                            <p class="testimonials__name">Name</p>
+                                            <p class="testimonials__position">CEO</p>
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>
+                            <div class="swiper-pagination"></div>                    
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="contact" class="main__contact contact">
+                <div class="contact__container">
+                    <h2 class="contact__title">Lets Design Together</h2>
+                    <p class="contact__text">Lorem ipsum dolor sit amet consectetur. Tristique amet sed massa nibh lectus netus in. Aliquet donec morbi convallis pretium</p>
+                    <form action="" class="contact__form">
+                        <input type="text" class="contact__input" placeholder="Enter Your Email">
+                        <button type="submit" class="contact__submit button button_orange">Contact Me</button>
+                    </form>
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+            <div class="footer__info">
+                <div class="footer__container">
+                    <div class="footer__logo">
+                        <svg>
+                            <use xlink:href="img/sprite.svg#mu"></use>
+                        </svg>
+                        <svg>
+                            <use xlink:href="img/sprite.svg#mumair"></use>
+                        </svg>
+                    </div>
+                    <nav class="footer__menu menuFooter">
+                        <ul class="menuFooter__list">
+                            <li class="menuFooter__item">
+                                <a data-goto="#home" href="##" class="menuFooter__link">Home</a>
+                            </li>
+                            <li class="menuFooter__item">
+                                <a data-goto="#about" href="##" class="menuFooter__link">About Me</a>
+                            </li>  
+                            <li class="menuFooter__item">
+                                <a data-goto="#service" href="##" class="menuFooter__link">Services</a>
+                            </li> 
+                            <li class="menuFooter__item">
+                                <a data-goto="#projects" href="##" class="menuFooter__link">Projects</a>
+                            </li>
+                            <li class="menuFooter__item">
+                                <a data-goto="#testimonials" href="##" class="menuFooter__link">Testimonials</a>
+                            </li>
+                            <li class="menuFooter__item">
+                                <a data-goto="#contact" href="##" class="menuFooter__link">Contact</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="footer__socials">
+                        <a href="##" class="footer__link">
+                            <svg class="footer__social">
+                                <use xlink:href="img/sprite.svg#facebook"></use>
+                            </svg>
+                        </a>
+                        <a href="##" class="footer__link">
+                            <svg class="footer__social">
+                                <use xlink:href="img/sprite.svg#twitter"></use>
+                            </svg>
+                        </a>
+                        <a href="##" class="footer__link">
+                            <svg class="footer__social">
+                                <use xlink:href="img/sprite.svg#instagram"></use>
+                            </svg>
+                        </a href="##" class="footer__link">
+                        <a href="##" class="footer__link">
+                            <svg class="footer__social">
+                                <use xlink:href="img/sprite.svg#linkedin"></use>
+                            </svg>
+                        </a href="##" class="footer__link">
+                    </div>
+                </div>
+            </div>
+            <div class="footer__rights">
+                <div class="footer__container">
+                    <p class="footer__text">© 2023 <span>Mumair</span> All Rights Reserved , Inc.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/lightgallery@2.8.3/lightgallery.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lightgallery@2.8.3/plugins/zoom/lg-zoom.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lightgallery@2.8.3/plugins/thumbnail/lg-thumbnail.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="js/script.js"></script>
+</html>
