@@ -995,28 +995,6 @@ svg {
   padding-bottom: 123.4592445328%;
   margin-bottom: 2.3125rem;
 }
-.introduction__scroll {
-  position: absolute;
-  opacity: 0.6;
-  width: 3.125rem;
-  height: 3.125rem;
-  right: 0.625rem;
-  bottom: 3.75rem;
-  -webkit-transform: rotate(180deg);
-      -ms-transform: rotate(180deg);
-          transform: rotate(180deg);
-  -webkit-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
-}
-[data-theme=dark] .introduction__scroll {
-  fill: #fff;
-}
-@media (max-width: 47.99875em) {
-  .introduction__scroll {
-    display: none;
-  }
-}
-
 .title {
   display: -webkit-box;
   display: -ms-flexbox;
