@@ -1,4 +1,4 @@
-# Mumair-portfolio
+# Cupcakes
 Portfolio site layout
 
 HTML5, CSS3, SCSS, JS, SwiperJS, lightGallery are used.
